@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BugSignal.View.AddAnimal">
+    <ContentPage.Content>
+        <StackLayout Margin="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            <Entry x:Name="txtAnimalCode" Placeholder="Enter Animal Code"/>
+            <Entry x:Name="txtCharacteristics" Placeholder="Enter Characteristics"/>
+            <Entry x:Name="txtSpecies" Placeholder="Enter Species"/>
+            <Entry x:Name="txtHabitat" Placeholder="Enter Habitat"/>
+            <Entry x:Name="txtThreat" Placeholder="Enter Threat"/>
+
+            <Button Text="Save" Clicked="btnSaveUpdate_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

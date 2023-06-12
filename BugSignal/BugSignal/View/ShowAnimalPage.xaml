@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BugSignal.View.ShowAnimalPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Image Source="bugsignal2.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+            <Button Text="Add New Record" BackgroundColor="IndianRed" CornerRadius="15" Clicked="btnAddRecord_Clicked" x:Name="btnAddRecord" HorizontalOptions="Center"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Text="AnimalCode" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Characteristics" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Species" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="2"/>
+                <Label Text="Habitat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="3"/>
+                <Label Text="Threat" FontAttributes="Bold" HorizontalTextAlignment="Start" Grid.Row="0" Grid.Column="4"/>
+            </Grid>
+
+            <ListView x:Name="lstData" BackgroundColor="White" HasUnevenRows="True" ItemSelected="lstData_ItemsSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding AnimalCode}" Grid.Row="0" Grid.Column="0" TextColor="Black" />
+                                    <Label Text="{Binding Characteristics}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                                    <Label Text="{Binding Species}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                                    <Label Text="{Binding Habitat}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                                    <Label Text="{Binding Threat}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

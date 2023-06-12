@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BugSignal.View.HomePage">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Image Source="BugSignalWhiteCopy"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Image Source="Skills.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Bug Signal Animal Welfare Center" FontSize="22" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <Label Text="At Bug Signal, we believe in providing a safe haven for animals in need, offering them a second chance at happiness and well-being." FontSize="17" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+
+            <Label Text="Our dedicated team of compassionate professionals works tirelessly to ensure that every animal that comes through our doors receives the love, care, and attention they deserve." FontSize="17" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+
+            <Button Text="Check Tables" BackgroundColor="IndianRed" Clicked="Button_Clicked" HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" CornerRadius="15"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
